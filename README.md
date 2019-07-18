@@ -36,10 +36,13 @@ elements are smaller than given value.
 alphabetic characters where the length must be equal to the value of the
 parameter. The second parameter contains an array of letters to omit.
 E.G. function(8,[t,b]) returns “eicdiofd” 
-10.Write a function that accepts 3 arrays and returns a string of duplicate
+
+  10.Write a function that accepts 3 arrays and returns a string of duplicate
 elements in ascending order. Return all alphabetic characters in
 lowercase.
 E.G. function ([ 1,2,3,d], [5, 3, 0, a], [A,d,9] returns “3,d”
+
+
 
 
                     ***FORBIDDEN TO USE BELOW!!!***
