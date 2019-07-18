@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = [1,2,3,'a',5];
+        let sum = 0,
+            len = 0;
+
+       function numSum(num){
+
+            for( let i = num.length - 1; i >= 0 ;i-- ){
+                if(isNaN(num[i]))
+                continue;
+                sum = sum + num[i];  
+                len++;
+            }
+            console.log(sum);
+            console.log(sum/len);
+        }    
+
+       sum = len = 0;
+       i = num.length - 1;
+       while( i >= 0){
+            if(isNaN(num[i])){
+                i--;
+              continue;
+            }  
+            //sum = sum + num[i];  
+            sum += num[i];
+            len++;
+            i--;
+        }
+        console.log(sum);
+        console.log(sum/len);
+
+
+    </script>
+
+</body>
+</html>

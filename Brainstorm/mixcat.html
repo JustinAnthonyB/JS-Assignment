@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           output = "";
+function mixcat(str,str1) {
+ 
+    x = "";
+    y = "";
+//     for (let i = str.length; i >= 0; i++) { 
+//          x =  str[i];
+//          for (let j = str1.length; j >= 0; j++) {
+//          y = str1[j];
+//          output = x + y;
+//          }
+
+// } 
+//     return output;
+
+// }
+i = 0;
+j = 0;
+while (i < str.length && j < str1.length){
+    output = output + (str.charAt(i++));
+    output = output + (str1.charAt(j++));
+}
+return output
+
+ }
+
+
+    </script>
+
+</body>
+</html>

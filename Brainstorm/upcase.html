@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// function upcase(str) {
+
+// var output="";
+//     for (let i = str.length; i >= 0; i++) { 
+//          let x =  str[i].charCodeAt(0);
+//         output= output + (x + 32);
+
+// } 
+//     return output;
+// }
+
+function upcase(str) {
+  var output = "";
+
+  for (var i = str.length; i >= 0; i++) {
+
+    var x = str[i].charCodeAt(0);
+    
+    if(x >= 65 && code <= 90) {
+    
+      var y = String.fromCharCode(x+32);
+    
+      output += y // append the modified character
+
+    
+    } else {
+
+      output += str[i]  // append the original character
+      
+    }
+    
+  }
+
+   return output;
+}
+
+    </script>
+
+</body>
+</html>
