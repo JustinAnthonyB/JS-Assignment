@@ -52,22 +52,24 @@
 // of the string.
 // ▪ E.G. function(“MyString”,3) returns “MyString ”
 function space(str, numspace)
-// **  NOT WORKING  **
+// ** WORKING  **
+
 {
-    var emptySpace = "";
-    for (i = 0; i < numspace; i++){
+  let emptySpace = "";
+  if (typeof(str) === "string" && typeof(numspace === "number")){
+    for (i = 0; i < numspace; ++i){
         emptySpace += " ";
     }
-    var output = emptySpace + str + emptySpace;
+    let output = str + emptySpace;
     return output;
 }
-
+}
 // 2. Write a function which returns the calling string value converted to
 // lowercase.
 // ▪ E.G. function("ALPHABET"); // returns " alphabet"
 function capit(str) {
 // **  WORKING  **
-  var output = "";
+  let output = "";
   for(i = 0; i < str.length; i++) {
     output += String.fromCharCode(str.charCodeAt(i) & 223);
   }
@@ -77,16 +79,33 @@ function capit(str) {
 // 1. Write a function to return a string that contains random numbers where the
 // length must be equal to the value of the parameter.
 // ▪ E.G. function(5) returns 10243
-function ranchar() {
-    // **  NOT WORKING  **
-  var t = "";
-  var lexicon = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-  for (var i = 0; i < this.length; i++)
-    t += lexicon.charAt(Math.floor(Math.random() * lexicon.length));
-
-  return t;
+function rand(num){
+  //working!!!
+  let a = "";
+  let b = "";
+  if (typeof(num) === "number"){
+    for(i = 0; i < num; ++i){
+      a += Math.floor((Math.random() * 9) + 0);
+    }  
+      return a;
 }
+}
+
+// function ranchar() {  LEGACY CODE
+//     // **  NOT WORKING  **
+//   var t = "";
+//   var lexicon = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+//   for (var i = 0; i < this.length; i++)
+//     t += lexicon.charAt(Math.floor(Math.random() * lexicon.length));
+
+//   return t;
+// }   LEGACY CODE
+
+
+
+
 // 4. Write a function that accepts a string and returns an array of its character
 // codes in reverse ordered
 // ▪ E.G. function("abc") returns [99, 98, 97]
@@ -98,6 +117,8 @@ function backwards(str) {
 }
     return output;
 }
+
+
 function mixcat(str,str1) {
  // **  WORKING  **
     x = "";
